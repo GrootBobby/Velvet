@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-glow-magenta {
+    text-shadow: 0 0 12px rgba(251, 171, 255, 0.6);
+  }
+  .text-glow-violet {
+    text-shadow: 0 0 12px rgba(224, 182, 255, 0.6);
+  }
+  .text-glow-amber {
+    text-shadow: 0 0 12px rgba(255, 185, 95, 0.6);
+  }
+  .bg-glass {
+    background: rgba(26, 27, 32, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}

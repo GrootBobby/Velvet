@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Velvet & Shake — Speakeasy Cocktails</title>
+    
+    <!-- PWA & Mobile Meta Tags -->
+    <meta name="description" content="Application Speakeasy de Mixologie et Jeux Party avec mode 100% Hors-Ligne." />
+    <meta name="theme-color" content="#121317" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Velvet Cocktail" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    
+    <!-- Google Fonts (Plus Jakarta Sans & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        background-color: #121317;
+        color: #E3E2E8;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      h1, h2, h3, .font-heading {
+        font-family: 'Outfit', sans-serif;
+      }
+      /* Custom dark scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121317;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #292A2E;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #343439;
+      }
+    </style>
+  </head>
+  <body class="bg-velvet-surface text-velvet-text select-none antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Enregistrement Service Worker PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('[PWA] ServiceWorker enregistré avec succès :', registration.scope);
+            })
+            .catch((error) => {
+              console.error('[PWA] Échec enregistrement ServiceWorker :', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Velvet Cocktail",
+  "description": "Dark Mode Velvet speakeasy cocktail app with AI substitutions, music accords, and Undercover party games",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

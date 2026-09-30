@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1B20"/>
+      <stop offset="100%" stop-color="#0D0E12"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBABFF"/>
+      <stop offset="100%" stop-color="#E0B6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="rgba(251, 171, 255, 0.25)" stroke-width="4" />
+  
+  <!-- Shaker & Cocktail Glass silhouette with Neon Glow -->
+  <g filter="url(#glow)">
+    <!-- Martini glass bowl -->
+    <path d="M140 180 L256 310 L372 180 Z" fill="none" stroke="url(#neon)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Liquid level -->
+    <path d="M165 210 L347 210" stroke="#FFB95F" stroke-width="12" stroke-linecap="round" />
+    <!-- Olive & skewer -->
+    <circle cx="280" cy="210" r="18" fill="#FBABFF" />
+    <line x1="230" y1="160" x2="310" y2="240" stroke="#E0B6FF" stroke-width="6" stroke-linecap="round" />
+    <!-- Glass stem -->
+    <line x1="256" y1="310" x2="256" y2="400" stroke="url(#neon)" stroke-width="18" stroke-linecap="round" />
+    <!-- Glass base -->
+    <line x1="190" y1="400" x2="322" y2="400" stroke="url(#neon)" stroke-width="18" stroke-linecap="round" />
+    <!-- Sparkle stars -->
+    <polygon points="380,120 386,136 402,142 386,148 380,164 374,148 358,142 374,136" fill="#FBABFF" />
+    <polygon points="120,280 124,292 136,296 124,300 120,312 116,300 104,296 116,292" fill="#FFB95F" />
+  </g>
+</svg>
